@@ -1,18 +1,19 @@
-import React,{useState} from 'react'
-import './Student'
-import Student from './Student'
-function App() {
-  const [name,setName]=useState("Harsh");
-  return (
-    <>
-    <Student name={"Harsh Saini"} email={"harshsaaii100200"} other={{address:'Delhi',occupation:'student'}}/>
-    <Student name={"Vishu Saini"} email={"harsh100200"} other={{address:'Delhi',occupation:'student'}}/>
-
-    {/* <Student name={name}/>
-    <button onClick={()=>setName("SuryaVanshi")}>Update Name</button> */}
-
-    </>
-  )
+import React,{useState} from "react";
+import './index.css'
+function App(){
+  const [data,setData]=useState(null);
+  function getData(d){
+    // console.log(d.target.value);
+    setData(d.target.value);
+  }
+  return(
+        <div className="App">
+       <h1>Input Type - Box</h1>
+       <input type="text" onChange={getData}/>
+       <p>{data}</p>
+       <button >Print Data={data}</button>
+    </div>
+      
+  );
 }
-
-export default App
+export default App 
