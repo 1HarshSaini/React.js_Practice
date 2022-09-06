@@ -1,19 +1,18 @@
-import React,{useState} from "react";
+import React,{useState} from 'react'
 import './index.css'
-function App(){
-  const [data,setData]=useState(null);
-  function getData(d){
-    // console.log(d.target.value);
-    setData(d.target.value);
-  }
-  return(
-        <div className="App">
-       <h1>Input Type - Box</h1>
-       <input type="text" onChange={getData}/>
-       <p>{data}</p>
-       <button >Print Data={data}</button>
+function App() {
+  const [status,setStatus]=useState(false);
+  return (
+    <div className='App'>
+        {
+          status?<h1>Showing on chenging state</h1>:null
+        }
+        {/* <button onClick={()=>setStatus(false)}>Hide</button>
+        <button onClick={()=>setStatus(true)}>show</button> */}
+
+        <button onClick={()=>setStatus(!status)}>Toggle</button>
     </div>
-      
-  );
+  )
 }
-export default App 
+
+export default App
