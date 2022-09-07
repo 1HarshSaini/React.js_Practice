@@ -1,13 +1,12 @@
-import React from 'react'
-import Profile from './Profile';
+import React,{useState} from 'react'
+
 function App() {
-  function getFormData(event){
-      event.preventDefault();
-  }
+  const [data,setData]=useState('Vishu');
   return (
-    <div>
-      <Profile/>
-    </div>
+    <>
+    <button onClick={()=>setData('Harsh')}>Button for usestate hook </button>
+    <p>{data}</p>
+    </>
   )
 }
 
