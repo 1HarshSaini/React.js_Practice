@@ -1,19 +1,16 @@
 import React,{useEffect,useState} from 'react'
-
+import User from'./User'  
 function App() {
   const[count,updateCount]=useState(0);
-  if(count>4){
-    alert("limit");
-  }
-  useEffect(()=>{
-    console.log("useEffect");
-  })
+  const[data,setdata]=useState(10);
+
   return (
     <div>
      
-       <h1>useeffect in React = {count}  </h1> 
        
-       <button onClick={()=>updateCount(count+1)}>Update counter</button>  
+       <User count={count} data ={data}/>
+       <button  onClick={()=>updateCount(count+1)}>Update counter</button>  
+       <button onClick={()=>setdata(data+1)}>Update Data</button>
        
     
     </div>
