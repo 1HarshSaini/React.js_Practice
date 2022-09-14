@@ -3,6 +3,7 @@ import User from'./User'
 import Form from './Form';
 import Counter_usereducer from './Counter_usereducer';
 import Use_reducer_with_object from './Use_reducer_with_object';
+import ComA from './ComA';
 function App() {
   const[count,updateCount]=useState(0);
   const[data,setdata]=useState(10);
@@ -24,7 +25,8 @@ function App() {
        
        {/* <Counter_usereducer/> */}
 
-       <Use_reducer_with_object/>
+       {/* <Use_reducer_with_object/> */}
+       <ComA/>
        
     </div>
 
